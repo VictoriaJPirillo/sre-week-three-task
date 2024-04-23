@@ -11,8 +11,11 @@ DEPLOYMENT="swype-app"
 MAX_RESTARTS=4
 
 # 2. Start a Loop: Begin an infinite loop that will continue until explicitly broken.
+while true; do 
+ #get the number of restarts of the pod
+ RESTARTS=$(kubectl get pods -n $[NAMESPACE} -1 app=${DEPLOYMENT} -O JSONPATH="{.items[0].status.containerStatuses[0].restartCount}")
 
-
+  echo "Current number of restarts: ${RESTARTS}"
 # 3. Check Pod Restarts: Within the loop, use the kubectl get pods command to retrieve the number of restarts of the pod associated with the specified deployment in the specified namespace.
 
 # 4. Display Restart Count: Print the current number of restarts to the console.
