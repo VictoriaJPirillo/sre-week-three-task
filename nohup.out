@@ -1,22 +1,2 @@
-watcher.sh: line 1: 1.: command not found
-watcher.sh: line 2: 2.: command not found
-watcher.sh: line 3: 3.: command not found
-watcher.sh: line 4: 4.: command not found
-watcher.sh: line 5: 5.: command not found
-watcher.sh: line 6: 6.: command not found
-watcher.sh: line 7: 7.: command not found
-watcher.sh: line 8: 8.: command not found
-watcher.sh: line 1: 1.: command not found
-watcher.sh: line 2: 2.: command not found
-watcher.sh: line 3: 3.: command not found
-watcher.sh: line 4: 4.: command not found
-watcher.sh: line 5: 5.: command not found
-watcher.sh: line 6: 6.: command not found
-watcher.sh: line 7: 7.: command not found
-watcher.sh: line 8: 8.: command not found
-watcher.sh: line 16: unexpected EOF while looking for matching `]'
-watcher.sh: line 37: syntax error: unexpected end of file
-watcher.sh: line 16: unexpected EOF while looking for matching `]'
-watcher.sh: line 37: syntax error: unexpected end of file
-watcher.sh: line 16: unexpected EOF while looking for matching `]'
-watcher.sh: line 37: syntax error: unexpected end of file
+Current number of restarts: 4
+Current number of restarts: 4
