@@ -16,6 +16,13 @@ while true; do
  RESTARTS=$(kubectl get pods -n $[NAMESPACE} -1 app=${DEPLOYMENT} -O JSONPATH="{.items[0].status.containerStatuses[0].restartCount}")
 
   echo "Current number of restarts: ${RESTARTS}"
+
+    # If the number of restarts is greater than the maximum allowed, scale down the deployment
+  if (( RESTARTS > MAX_RESTARTS )); then
+    echo "Maximum number of restarts exceeded. Scaling down the deployment..."
+    kubectl scale --replicas=0 deployment/${DEPLOYMENT} -n ${NAMESPACE}
+    break
+  fi
 # 3. Check Pod Restarts: Within the loop, use the kubectl get pods command to retrieve the number of restarts of the pod associated with the specified deployment in the specified namespace.
 
 # 4. Display Restart Count: Print the current number of restarts to the console.
