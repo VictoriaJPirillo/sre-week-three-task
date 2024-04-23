@@ -3,9 +3,12 @@
 # Written by Victoria J Pirillo
 
 # 1. Define Variables: Set the namespace, deployment name, and maximum number of restarts allowed before scaling down the deployment.
-namespace="sre"
-DEPLOYMENT_NAME
-MAX_RESTARTS_ALLOWED=5
+#Set namespace
+NAMESPACE="sre"
+#Deployment Name
+DEPLOYMENT="swype-app"
+#Maximum number of restarts before scaling down
+MAX_RESTARTS=4
 
 # 2. Start a Loop: Begin an infinite loop that will continue until explicitly broken.
 
