@@ -12,8 +12,8 @@ MAX_RESTARTS=4
 
 # 2. Start a Loop: Begin an infinite loop that will continue until explicitly broken.
 while true; do 
- #get the number of restarts of the pod
- RESTARTS=$(kubectl get pods -n $[NAMESPACE} -1 app=${DEPLOYMENT} -O JSONPATH="{.items[0].status.containerStatuses[0].restartCount}")
+ # Get the number of restarts of the pod
+ RESTARTS=$(kubectl get pods -n ${NAMESPACE} -1 app=${DEPLOYMENT} -o JSONPATH="{.items[0].status.containerStatuses[0].restartCount}")
 
   echo "Current number of restarts: ${RESTARTS}"
 
